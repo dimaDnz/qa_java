@@ -38,4 +38,13 @@ public class TestLion {
         Lion lion = new Lion("Самец", feline);
         assertEquals(food, lion.getFood());
     }
+
+    @Test
+    public void testGetKittens() throws Exception {
+        Feline feline = Mockito.spy(Feline.class);
+        Lion lion = new Lion("Самец", feline);
+        assertEquals(1, lion.getKittens());
+        Mockito.verify(feline, Mockito.times(1)).getKittens(1);
+
+    }
 }
