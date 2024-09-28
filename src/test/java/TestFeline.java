@@ -11,6 +11,8 @@ public class TestFeline {
     @Spy
     Feline feline = new Feline();
 
+    Feline feline2 = new Feline();
+
     @Test
     public void eatMeatTest() throws Exception {
         feline.eatMeat();
@@ -19,7 +21,7 @@ public class TestFeline {
 
     @Test
     public void getFamilyTest() {
-        Assert.assertEquals("Плохо, попробуй еще раз","Кошачьи", feline.getFamily());
+        Assert.assertEquals("Плохо, попробуй еще раз","Кошачьи", feline2.getFamily());
     }
 
     @Test
